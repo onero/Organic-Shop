@@ -19,6 +19,6 @@ export const AppRoutes = RouterModule.forRoot([
   {path: 'login', component: LoginComponent},
   {path: 'my/orders', component: MyOrdersComponent},
   // Admin routes
-  {path: 'admin/procucts', component: AdminProductsComponent},
+  {path: 'admin/products', component: AdminProductsComponent},
   {path: 'admin/orders', component: AdminOrdersComponent},
 ]);
