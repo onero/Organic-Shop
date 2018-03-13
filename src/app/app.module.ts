@@ -20,6 +20,8 @@ import {RouterModule} from "@angular/router";
 import {AppRoutes} from "./app.routing";
 import { LoginComponent } from './login/login.component';
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
+import { AuthService } from './auth.service';
+import {AuthGuard} from "./auth.guard";
 
 
 @NgModule({
@@ -44,7 +46,7 @@ import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
     AppRoutes,
     NgbModule.forRoot()
   ],
-  providers: [],
+  providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
