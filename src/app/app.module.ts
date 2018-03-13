@@ -24,6 +24,10 @@ import { AuthService } from './auth.service';
 import {AuthGuard} from "./auth.guard";
 import { UserService } from './user.service';
 import { AdminGuard } from './admin.guard';
+import { ProductFormComponent } from './admin/product-form/product-form.component';
+import { CategoryService } from './category.service';
+import {FormsModule} from '@angular/forms';
+import { ProductService } from './product.service';
 
 
 @NgModule({
@@ -38,7 +42,8 @@ import { AdminGuard } from './admin.guard';
     MyOrdersComponent,
     AdminProductsComponent,
     AdminOrdersComponent,
-    LoginComponent
+    LoginComponent,
+    ProductFormComponent
   ],
   imports: [
     BrowserModule,
@@ -46,9 +51,10 @@ import { AdminGuard } from './admin.guard';
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     AppRoutes,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    FormsModule
   ],
-  providers: [AuthService, AuthGuard, UserService, AdminGuard],
+  providers: [AuthService, AuthGuard, UserService, AdminGuard, CategoryService, ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

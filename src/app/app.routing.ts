@@ -10,6 +10,7 @@ import {AdminOrdersComponent} from './admin/admin-orders/admin-orders.component'
 import {MyOrdersComponent} from './my-orders/my-orders.component';
 import {AuthGuard} from './auth.guard';
 import {AdminGuard} from './admin.guard';
+import {ProductFormComponent} from './admin/product-form/product-form.component';
 
 export const AppRoutes = RouterModule.forRoot([
   // Anonymous routes
@@ -25,5 +26,6 @@ export const AppRoutes = RouterModule.forRoot([
 
   // Admin routes
   {path: 'admin/products', component: AdminProductsComponent, canActivate: [AuthGuard, AdminGuard]},
+  {path: 'admin/products/new', component: ProductFormComponent, canActivate: [AuthGuard, AdminGuard]},
   {path: 'admin/orders', component: AdminOrdersComponent, canActivate: [AuthGuard, AdminGuard]},
 ]);
