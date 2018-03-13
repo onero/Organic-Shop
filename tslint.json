@@ -120,11 +120,13 @@
     "directive-selector": [
       true,
       "attribute",
+      "os",
       "camelCase"
     ],
     "component-selector": [
       true,
       "element",
+      "os",
       "kebab-case"
     ],
     "no-output-on-prefix": true,
